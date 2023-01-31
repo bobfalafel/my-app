@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, lazy, Suspense } from 'react';
 import './App.css';
+const Homepage = lazy(() => import("./comp/Homepage"));
+const About = lazy(() => import("./comp/About"));
+
 
 function App() {
+
+  const [isLogged, setLog] = useState(false)
+  //const [loggedUser, setUser] = useState(undefined)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => { setLog(!isLogged) }}>change</button>
+      <Suspense>
+        <About logged={isLogged}/>
+      </Suspense>
+      <Suspense>
+        <Homepage logged={isLogged} />
+      </Suspense>
     </div>
   );
 }
