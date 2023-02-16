@@ -1,7 +1,10 @@
 import React, { useState, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-const Homepage = lazy(() => import("./comp/Homepage"));
-const About = lazy(() => import("./comp/About"));
+import Homepage from './comp/Homepage';
+import About from './comp/About';
+import NavbarRouter from './comp/NavbarRouter';
+import Navbar from './comp/Navbar';
 
 
 function App() {
@@ -12,12 +15,8 @@ function App() {
   return (
     <div className="App">
       <button onClick={() => { setLog(!isLogged) }}>change</button>
-      <Suspense>
-        <About logged={isLogged}/>
-      </Suspense>
-      <Suspense>
-        <Homepage logged={isLogged} />
-      </Suspense>
+        <Navbar logged={isLogged}></Navbar>
+        <NavbarRouter logged={isLogged}/>
     </div>
   );
 }
