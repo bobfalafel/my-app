@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "email": "examp@le.com",
+      "username": "example",
+      "password": "example"
+    }
+  ],
+  "businesses": [
+    {
+      "id": 0,
+      "email": "",
+      "username": "",
+      "password": "",
+      "cardid": [
+        ""
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": 0,
+      "bname": "",
+      "bdesc": "",
+      "badress": "",
+      "bphone": "",
+      "bimgurl": "",
+      "cards": [
+        ""
+      ]
+    }
+  ]
+}

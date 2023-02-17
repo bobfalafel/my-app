@@ -11,6 +11,7 @@ function About(props: { logged: boolean }) {
                     Who are we?
                 </h1>
                 <h3>
+                    
                     Who are you? <br /> What are you? <br /> Get outta here! <br />
                     We are the stories we tell ourselves. In this universe, and this existence, where we live with this duality of whether we exist or not and who are we, the stories we tell ourselves are the stories that define the potentialities of our existence. We are the stories we tell ourselves. So that’s as wide as we look at stories. A story is the relationship that you develop between who you are, or who you potentially are, and the infinite world, and that’s our mythology.
                     <br />

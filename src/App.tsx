@@ -5,6 +5,7 @@ import Homepage from './comp/Homepage';
 import About from './comp/About';
 import NavbarRouter from './comp/NavbarRouter';
 import Navbar from './comp/Navbar';
+import NavbarLogged from './comp/NavbarLogged';
 
 
 function App() {
@@ -15,8 +16,12 @@ function App() {
   return (
     <div className="App">
       <button onClick={() => { setLog(!isLogged) }}>change</button>
-        <Navbar logged={isLogged}></Navbar>
-        <NavbarRouter logged={isLogged}/>
+      {isLogged?
+      <NavbarLogged logged = {isLogged}/>
+      :
+      <Navbar logged={isLogged}></Navbar>
+      }
+      <NavbarRouter logged={isLogged}/>
     </div>
   );
 }
