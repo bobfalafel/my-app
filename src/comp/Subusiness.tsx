@@ -52,7 +52,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
                 })
             }
             else{
-                alert("Oops there seems to be some problem with that...\nthere is already a business with that Email");//TODO specific alerts
+                alert("Oops there seems to be some problem with that...\nChange some stuff and try again!");
             }
         })
         

@@ -22,6 +22,7 @@ function AllCards(props: { logged: boolean }) {
         axios.get("http://localhost:3000/cards")
             .then((response:any)=>{
                 setTemplist(response.data);
+                console.log(templist);
             })
             .catch((error:any)=>{
                 console.log(error);
@@ -31,8 +32,16 @@ function AllCards(props: { logged: boolean }) {
     return (
         <div className="card-deck">
             {templist.map((ticket) => (
-                <div key={ticket.id}>
+                <div className='card' key={ticket.id}>
                     {ticket.name}
+                    <br />
+                    {ticket.desc}
+                    <br />
+                    {ticket.adress}
+                    <br />
+                    {ticket.phone}
+                    <br />
+                    <img height={100} src={ticket.imgurl} alt="Error Loading Image" />
                 </div>
             ))}
         </div>

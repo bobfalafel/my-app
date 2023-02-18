@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import axios from "axios";
 import { object } from 'yup';
+import './mycards.css';
 
 function Mycards(props: { logged: boolean }) {
     let temp = sessionStorage.getItem("loggedUser");
@@ -49,12 +50,20 @@ function Mycards(props: { logged: boolean }) {
     return (
         <div className="card-deck">
             {templist.map((ticket) => (
-                <div key={ticket.id}>
+                <div className='card' key={ticket.id}>
                     {ticket.name}
+                    <br />
+                    {ticket.desc}
+                    <br />
+                    {ticket.adress}
+                    <br />
+                    {ticket.phone}
+                    <br />
+                    <img height={100} src={ticket.imgurl} alt="Error Loading Image" />
+                    <br />
                     <a onClick={sendEditInfo} href="http://localhost:3001/editcard"><img height={30} src="https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-pencil-icon-png-image_1753753.jpg" alt="edit" id={"edit-"+ticket.id}/></a>
-                    <img onClick={deleteTicket} height={30} src="https://cdn-icons-png.flaticon.com/512/2891/2891491.png" alt="delete" id={"delete-"+ticket.id}/>                    
+                    <a href=""><img onClick={deleteTicket} height={30} src="https://cdn-icons-png.flaticon.com/512/2891/2891491.png" alt="delete" id={"delete-"+ticket.id}/></a>
                 </div>
-                //TODO add a way to edit/delete
             ))}
         </div>
     );

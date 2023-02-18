@@ -24,7 +24,6 @@ function Signup (props: {logged:boolean,setlog:any}){
     };
 
     const updatedb= ()=>{
-        //TODO input Validation
         const user = {mail:email,username:username,password:password};
         console.log(user);
         let isFree = true;
@@ -40,8 +39,8 @@ function Signup (props: {logged:boolean,setlog:any}){
                     
                 }
             }
-            if(isFree && user.mail !== "" && user.password !== "" && user.username !==""){
-                axios.post("http://localhost:3000/users",{business:false,email:email,name:username, password:password})
+            if(isFree && user.mail.length >= 4 && user.password.length >= 4 && user.username.length >= 4 && user.mail.includes('@')&&user.mail.includes('.')){
+                axios.post("http://localhost:3000/users",{business:false,email:email,username:username, password:password})
                 .then((response:any) => {
                     console.log(response.data);
                     alert("Sign up successful");
@@ -53,7 +52,7 @@ function Signup (props: {logged:boolean,setlog:any}){
                 })
             }
             else{
-                alert("Oops there seems to be some problem with that...\nthere is already a user with that Email");
+                alert("Oops there seems to be some problem with that...\nTry again!");
             }
         })
         
