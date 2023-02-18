@@ -8,6 +8,7 @@ import Login from './Login';
 import Subusiness from './Subusiness';
 import CreateCard from './CreateCard';
 import Mycards from './Mycards'
+import EditCard from './EditCard';
 import AllCards from './AllCards';
 
 function NavbarRouter(props: { logged: boolean,setlog:any }) {
@@ -22,6 +23,7 @@ function NavbarRouter(props: { logged: boolean,setlog:any }) {
                 <Route path='/newcard' element={<CreateCard logged={props.logged} setlog={props.setlog} />}></Route>
                 <Route path='/mycards' element={<Mycards logged={props.logged} />}></Route>
                 <Route path='/allcards' element={<AllCards logged={props.logged} />}></Route>
+                <Route path='/editcard' element={<EditCard/>}></Route>
             </Routes>
         </BrowserRouter>
     );

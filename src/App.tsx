@@ -32,6 +32,8 @@ function App() {
       <Navbar logged={isLogged}></Navbar>
       }
       <NavbarRouter logged={isLogged} setlog={setLog}/>
+      <br />
+      <div>© Shay The Cohen</div>
     </div>
   );
 }
