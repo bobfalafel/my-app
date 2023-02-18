@@ -30,8 +30,6 @@ function NavbarLogged(props: { logged: boolean, setLog:any }) {
             <li>
                 <a href="http://localhost:3001/about">About</a>
             </li>
-            {/* is logged user a business?
-            if so: */}
             {isBusiness?
             <li>
                 <a href="http://localhost:3001/newcard">Create Card</a>
@@ -46,8 +44,10 @@ function NavbarLogged(props: { logged: boolean, setLog:any }) {
             :
             null
             }
-            {/* end of last comment */}
-             <li>
+            <li>
+                <a href="http://localhost:3001/allcards">All Cards</a>
+            </li>
+            <li>
                 <a onClick={logout} href="http://localhost:3001/">Log Out</a>
             </li> 
         </ul>

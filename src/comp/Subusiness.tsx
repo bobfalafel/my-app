@@ -40,7 +40,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
                 }
             }
             if(isFree && business.mail !== "" && business.password !== "" && business.businessname !==""){
-                axios.post("http://localhost:3000/users",{business:true,email:email,name:businessname, password:password,cardid:[]})
+                axios.post("http://localhost:3000/users",{business:true,email:email,name:businessname, password:password})
                 .then((response:any) => {
                     console.log(response.data);
                     alert("Sign up successful");

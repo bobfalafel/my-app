@@ -7,6 +7,8 @@ import Signup from './Signup';
 import Login from './Login';
 import Subusiness from './Subusiness';
 import CreateCard from './CreateCard';
+import Mycards from './Mycards'
+import AllCards from './AllCards';
 
 function NavbarRouter(props: { logged: boolean,setlog:any }) {
     return (
@@ -18,6 +20,8 @@ function NavbarRouter(props: { logged: boolean,setlog:any }) {
                 <Route path='/login' element={<Login logged={props.logged} setlog={props.setlog} />}></Route>
                 <Route path='/business' element={<Subusiness logged={props.logged} setlog={props.setlog} />}></Route>
                 <Route path='/newcard' element={<CreateCard logged={props.logged} setlog={props.setlog} />}></Route>
+                <Route path='/mycards' element={<Mycards logged={props.logged} />}></Route>
+                <Route path='/allcards' element={<AllCards logged={props.logged} />}></Route>
             </Routes>
         </BrowserRouter>
     );

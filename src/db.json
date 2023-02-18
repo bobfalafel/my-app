@@ -12,9 +12,54 @@
       "email": "bb",
       "name": "bb",
       "password": "bb",
-      "cardid": [],
       "id": 2
     }
   ],
-  "cards": []
+  "cards": [
+    {
+      "name": "a",
+      "desc": "a",
+      "adress": "a",
+      "phone": "a",
+      "imgurl": "a",
+      "ownerid": 2,
+      "id": 1
+    },
+    {
+      "name": "b",
+      "desc": "b",
+      "adress": "b",
+      "phone": "b",
+      "imgurl": "b",
+      "ownerid": 1,
+      "id": 2
+    },
+    {
+      "name": "c",
+      "desc": "c",
+      "adress": "c",
+      "phone": "c",
+      "imgurl": "c",
+      "ownerid": 2,
+      "id": 3
+    },
+    {
+      "name": "d",
+      "desc": "d",
+      "adress": "d",
+      "phone": "d",
+      "imgurl": "d",
+      "ownerid": 2,
+      "id": 4
+    },
+    {
+      "name": "e",
+      "desc": "e",
+      "adress": "e",
+      "phone": "e",
+      "imgurl": "e",
+      "ownerid": 4,
+      "id": 5
+    }
+  ]
 }
