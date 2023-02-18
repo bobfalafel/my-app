@@ -10,7 +10,19 @@ import Homepage from './Homepage';
 import About from './About';
 
 //TODO ask for the user's business field to pick which one to show
-function NavbarLogged(props: { logged: boolean }) {
+function NavbarLogged(props: { logged: boolean, setLog:any }) {
+
+    const logout = ()=>{
+        sessionStorage.removeItem("loggedUser");
+        props.setLog(false);
+    }
+    let temp = sessionStorage.getItem("loggedUser")
+    if(temp == null)
+    {
+        temp = "";
+    }
+    let isBusiness = JSON.parse(temp).business;
+
     return (
         <ul id='nav-list'>
             <li>
@@ -21,13 +33,24 @@ function NavbarLogged(props: { logged: boolean }) {
             </li>
             {/* is logged user a business?
             if so: */}
+            {isBusiness?
             <li>
                 <a href="http://localhost:3001/newcard">Create Card</a>
             </li>
-            {/* end of last comment */}
+            :
+            null
+            }
+            {isBusiness?
             <li>
-                <a href="http://localost:3001/">Log Out</a>
+                <a href="http://localhost:3001/mycards">My Cards</a>
             </li>
+            :
+            null
+            }
+            {/* end of last comment */}
+             <li>
+                <a onClick={logout} href="http://localhost:3001/">Log Out</a>
+            </li> 
         </ul>
     );
 }

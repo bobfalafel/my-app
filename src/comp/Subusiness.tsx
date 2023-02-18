@@ -27,7 +27,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
         const business = {mail:email,businessname:businessname,password:password, cardid:[""]};
         console.log(business);
         let isFree = true;
-        axios.get("http://localhost:3000/businesses")
+        axios.get("http://localhost:3000/users")
         .then((response:any) => {
             for(let i=0;i<response.data.length;i++)
             {
@@ -45,6 +45,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
                     console.log(response.data);
                     alert("Sign up successful");
                     props.setlog(true);
+                    sessionStorage.setItem("loggedUser",JSON.stringify(response.data));
                 })
                 .catch((error:any)=>{
                     alert("Oops there seems to be some problem with that...\n"+error);

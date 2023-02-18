@@ -46,6 +46,7 @@ function Signup (props: {logged:boolean,setlog:any}){
                     console.log(response.data);
                     alert("Sign up successful");
                     props.setlog(true);
+                    sessionStorage.setItem("loggedUser",JSON.stringify(response.data));
                 })
                 .catch((error:any)=>{
                     alert("Oops there seems to be some problem with that...\n"+error);

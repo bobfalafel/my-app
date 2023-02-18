@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, lazy, Suspense, SetStateAction,useCallback,useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './comp/Homepage';
@@ -17,15 +17,18 @@ import {
 
 
 function App() {
-
-  const [isLogged, setLog] = useState(false)
+  let islogtemp = false;
+  if(sessionStorage.getItem("loggedUser") != null){
+    islogtemp = true;
+  }
+  const [isLogged, setLog] = useState(islogtemp)
   //const [loggedUser, setUser] = useState(undefined)
 
   return (
     <div className="App">
       <button onClick={() => { setLog(!isLogged) }}>change</button>
       {isLogged?
-      <NavbarLogged logged = {isLogged}/>//TODO add the logged user as param to pick navbar
+      <NavbarLogged logged = {isLogged} setLog={setLog}/>//TODO add the logged user as param to pick navbar
       :
       <Navbar logged={isLogged}></Navbar>
       }

@@ -37,6 +37,12 @@ function CreateCard (props: {logged:boolean,setlog:any}){
         {
             alert("There was a problem...\n"+error);
         })
+        setBimg("");
+        setBname("");
+        setAddress("");
+        setBdesc("");
+        setBname("");
+        setBphone("");
     }
 
 

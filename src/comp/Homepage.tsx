@@ -11,7 +11,7 @@ import {
 function Homepage(props: { logged: boolean }) {
     return (
         <div className="about">
-            <Carousel images={["https://i0.wp.com/www.shanazrafiq.com/wp-content/uploads/2022/05/Chicken-Seekh-Kabab-1.jpg?w=1920&ssl=1","https://rukminim1.flixcart.com/image/416/416/poster/f/g/c/hades-god-of-war-athah-fine-quality-poster-original-imaejyf6y8sgsfq7.jpeg?q=70","https://m.media-amazon.com/images/I/71EYmWxcmdL._AC_SL1400_.jpg","https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_0.jpg"]}/>
+            <Carousel images={["https://i0.wp.com/www.shanazrafiq.com/wp-content/uploads/2022/05/Chicken-Seekh-Kabab-1.jpg?w=1920&ssl=1","https://m.media-amazon.com/images/I/71EYmWxcmdL._AC_SL1400_.jpg","https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_0.jpg"]}/>
             <div className='about-text'>
                 <h1>LET YE HEART BE JUDGED AND THY SOUL BE RIGHTOUS</h1>
                 <h3>
