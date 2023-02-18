@@ -1,23 +1,39 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, lazy, Suspense, SetStateAction,useCallback,useEffect } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-const Homepage = lazy(() => import("./comp/Homepage"));
-const About = lazy(() => import("./comp/About"));
+import Homepage from './comp/Homepage';
+import About from './comp/About';
+import Signup from './comp/Signup';
+import NavbarRouter from './comp/NavbarRouter';
+import Navbar from './comp/Navbar';
+import NavbarLogged from './comp/NavbarLogged';
+import CreateCard from './comp/CreateCard';
+import {
+  BrowserRouter,
+  useParams,
+  Routes,
+  Link,
+} from 'react-router-dom';
 
 
 function App() {
-
-  const [isLogged, setLog] = useState(false)
+  let islogtemp = false;
+  if(sessionStorage.getItem("loggedUser") != null){
+    islogtemp = true;
+  }
+  const [isLogged, setLog] = useState(islogtemp)
   //const [loggedUser, setUser] = useState(undefined)
 
   return (
     <div className="App">
-      <button onClick={() => { setLog(!isLogged) }}>change</button>
-      <Suspense>
-        <About logged={isLogged}/>
-      </Suspense>
-      <Suspense>
-        <Homepage logged={isLogged} />
-      </Suspense>
+      {isLogged?
+      <NavbarLogged logged = {isLogged} setLog={setLog}/>
+      :
+      <Navbar logged={isLogged}></Navbar>
+      }
+      <NavbarRouter logged={isLogged} setlog={setLog}/>
+      <br />
+      <div>© Shay The Cohen</div>
     </div>
   );
 }

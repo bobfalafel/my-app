@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "business": false,
+      "email": "aa",
+      "name": "aa",
+      "password": "aa",
+      "id": 1
+    },
+    {
+      "business": true,
+      "email": "bb",
+      "name": "bb",
+      "password": "bb",
+      "id": 2
+    }
+  ],
+  "cards": [
+    {
+      "name": "b",
+      "desc": "b",
+      "adress": "b",
+      "phone": "b",
+      "imgurl": "b",
+      "ownerid": 1,
+      "id": 2
+    },
+    {
+      "name": "e",
+      "desc": "e",
+      "adress": "e",
+      "phone": "e",
+      "imgurl": "e",
+      "ownerid": 4,
+      "id": 5
+    },
+    {
+      "name": "r",
+      "desc": "r",
+      "adress": "r",
+      "phone": "r",
+      "imgurl": "r",
+      "ownerid": 2,
+      "id": 9
+    },
+    {
+      "name": "t",
+      "desc": "t",
+      "adress": "t",
+      "phone": "t",
+      "imgurl": "t",
+      "ownerid": 2,
+      "id": 10
+    },
+    {
+      "name": "y",
+      "desc": "y",
+      "adress": "y",
+      "phone": "y",
+      "imgurl": "y",
+      "ownerid": 2,
+      "id": 11
+    },
+    {
+      "name": "ggg",
+      "desc": "f",
+      "adress": "e",
+      "phone": "e",
+      "imgurl": "e",
+      "ownerid": 2,
+      "id": 15
+    }
+  ]
+}
