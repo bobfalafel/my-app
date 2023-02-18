@@ -40,7 +40,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
                 }
             }
             if(isFree && business.mail !== "" && business.password !== "" && business.businessname !==""){
-                axios.post("http://localhost:3000/users",{business:true,email:email,businessname:businessname, password:password,cardid:[]})
+                axios.post("http://localhost:3000/users",{business:true,email:email,name:businessname, password:password,cardid:[]})
                 .then((response:any) => {
                     console.log(response.data);
                     alert("Sign up successful");
@@ -52,7 +52,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
                 })
             }
             else{
-                alert("Oops there seems to be some problem with that...\nthere is already a business with that Email");
+                alert("Oops there seems to be some problem with that...\nthere is already a business with that Email");//TODO specific alerts
             }
         })
         

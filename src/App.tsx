@@ -26,9 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => { setLog(!isLogged) }}>change</button>
       {isLogged?
-      <NavbarLogged logged = {isLogged} setLog={setLog}/>//TODO add the logged user as param to pick navbar
+      <NavbarLogged logged = {isLogged} setLog={setLog}/>
       :
       <Navbar logged={isLogged}></Navbar>
       }

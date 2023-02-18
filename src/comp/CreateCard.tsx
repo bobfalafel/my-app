@@ -9,6 +9,11 @@ import {
 import axios from "axios";
 
 function CreateCard (props: {logged:boolean,setlog:any}){
+    let temp = sessionStorage.getItem("loggedUser");
+    if(temp == null){
+        temp='';
+    }
+    const currentUser = JSON.parse(temp);
     const [bname,setBname] = useState("");
     const [bdesc,setBdesc] = useState("");
     const [adress,setAddress] = useState("");
@@ -32,7 +37,7 @@ function CreateCard (props: {logged:boolean,setlog:any}){
     };
 
     const updatedb= ()=>{
-        axios.post("http://localhost:3000/cards",{name:bname,desc:bdesc,adress:adress,phone:bphone,imgurl:bimg,owner:0})//TODO add the owner as the currently logged business
+        axios.post("http://localhost:3000/cards",{name:bname,desc:bdesc,adress:adress,phone:bphone,imgurl:bimg,ownerid:currentUser.id})
         .catch((error:any)=>
         {
             alert("There was a problem...\n"+error);
@@ -48,31 +53,23 @@ function CreateCard (props: {logged:boolean,setlog:any}){
 
     return(
         <div className='screen'>
-            {props.logged ?
-                <div className='alreadyLogged'>
-                    <h1>You are already logged in.</h1>
-                    <a href="http://localhost:3001/">Go Back</a>
-                    {/* <Link to={'/?logged=${props.logged}'}>go there</Link> */}
+            <div className='signup'>
+                <h1>Welcome to our <s>Cult</s> Site!</h1>
+                <div>
+                    <h3>Business name plz</h3>
+                    <input type="text" value={bname} onChange={bnameChange} />
+                    <h3>Business description goes here:</h3>
+                    <input type="text" value={bdesc} onChange={bdescChange} />
+                    <h3>Business, where u @?</h3>
+                    <input type="text" value={adress} onChange={adressChange} />
+                    <h3>Can I get your number?</h3>
+                    <input type="text" value={bphone} onChange={bphoneChange} />
+                    <h3>link ur image tnx</h3>
+                    <input type="text" value={bimg} onChange={bimgChange} />
+                    <br />
+                    <button onClick={updatedb}>Awaken the dreamer!</button>
                 </div>
-                :
-                <div className='signup'>
-                    <h1>Welcome to our <s>Cult</s> Site!</h1>
-                   <div>
-                        <h3>Business name plz</h3>
-                        <input type="text" value={bname} onChange={bnameChange} />
-                        <h3>Business description goes here:</h3>
-                        <input type="text" value={bdesc} onChange={bdescChange} />
-                        <h3>Business, where u @?</h3>
-                        <input type="password" value={adress} onChange={adressChange} />
-                        <h3>Can I get your number?</h3>
-                        <input type="text" value={bphone} onChange={bphoneChange} />
-                        <h3>link ur image tnx</h3>
-                        <input type="text" value={bimg} onChange={bimgChange} />
-                        <br />
-                        <button onClick={updatedb}>Awaken the dreamer!</button>
-                    </div>
-                </div>
-            }
+            </div>
         </div>
     );
 }

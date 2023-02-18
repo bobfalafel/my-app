@@ -1,4 +1,20 @@
 {
-  "users": [],
+  "users": [
+    {
+      "business": false,
+      "email": "aa",
+      "name": "aa",
+      "password": "aa",
+      "id": 1
+    },
+    {
+      "business": true,
+      "email": "bb",
+      "name": "bb",
+      "password": "bb",
+      "cardid": [],
+      "id": 2
+    }
+  ],
   "cards": []
 }

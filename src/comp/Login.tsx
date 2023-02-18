@@ -29,9 +29,8 @@ function Login (props: {logged:boolean,setlog:any}){
             {
                 if(response.data[i].email === user.mail && response.data[i].password===user.password)
                 {
-                    alert("Welcome back "+response.data[i].username);
                     sessionStorage.setItem("loggedUser",JSON.stringify(response.data[i]));
-                    console.log("HERE");
+                    alert("Welcome back "+response.data[i].name);
                     isMatch = true;
                     break;
                     

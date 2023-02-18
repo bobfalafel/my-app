@@ -41,7 +41,7 @@ function Signup (props: {logged:boolean,setlog:any}){
                 }
             }
             if(isFree && user.mail !== "" && user.password !== "" && user.username !==""){
-                axios.post("http://localhost:3000/users",{business:false,email:email,username:username, password:password})
+                axios.post("http://localhost:3000/users",{business:false,email:email,name:username, password:password})
                 .then((response:any) => {
                     console.log(response.data);
                     alert("Sign up successful");

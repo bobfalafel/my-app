@@ -9,7 +9,6 @@ import {
 import Homepage from './Homepage';
 import About from './About';
 
-//TODO ask for the user's business field to pick which one to show
 function NavbarLogged(props: { logged: boolean, setLog:any }) {
 
     const logout = ()=>{
