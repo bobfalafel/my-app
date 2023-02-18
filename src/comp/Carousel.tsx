@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import './Carousel.css';
+import {
+  BrowserRouter,
+  useParams,
+  Route,
+  Routes,
+  Link,
+} from 'react-router-dom';
 
 const Carousel = (props:{images:string[]}) => {
   const [currentIndex, setCurrentIndex] = useState(0);

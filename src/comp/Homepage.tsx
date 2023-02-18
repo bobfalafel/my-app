@@ -1,5 +1,12 @@
 import React from 'react';
 import Carousel from './Carousel';
+import {
+  BrowserRouter,
+  useParams,
+  Route,
+  Routes,
+  Link,
+} from 'react-router-dom';
 
 function Homepage(props: { logged: boolean }) {
     return (

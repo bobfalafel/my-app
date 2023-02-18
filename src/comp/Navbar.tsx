@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,useParams } from 'react-router-dom';
 import Homepage from './Homepage';
 import About from './About';
 import Signup from './Signup';
@@ -16,6 +16,12 @@ function Navbar(props: { logged: boolean }) {
             </li>
             <li>
                 <a href="http://localhost:3001/signup">Sign Up</a>
+            </li>
+            <li>
+                <a href="http://localhost:3001/login">Log In</a>
+            </li>
+            <li>
+                <a href="http://localhost:3001/business">Business</a>
             </li>
         </ul>
     );

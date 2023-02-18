@@ -1,34 +1,32 @@
 {
-  "users": [
-    {
-      "id": 0,
-      "email": "examp@le.com",
-      "username": "example",
-      "password": "example"
-    }
-  ],
-  "businesses": [
-    {
-      "id": 0,
-      "email": "",
-      "username": "",
-      "password": "",
-      "cardid": [
-        ""
-      ]
-    }
-  ],
+  "users": [],
   "cards": [
     {
       "id": 0,
-      "bname": "",
-      "bdesc": "",
-      "badress": "",
-      "bphone": "",
-      "bimgurl": "",
-      "cards": [
-        ""
-      ]
+      "name": "",
+      "desc": "",
+      "adress": "",
+      "phone": "",
+      "imgurl": "",
+      "ownerid": 0
+    },
+    {
+      "name": "asd",
+      "desc": "asd",
+      "adress": "asd",
+      "phone": "asd",
+      "imgurl": "asd",
+      "owner": 0,
+      "id": 1
+    },
+    {
+      "name": "asd",
+      "desc": "asd",
+      "adress": "asd",
+      "phone": "asd",
+      "imgurl": "asd",
+      "owner": 0,
+      "id": 2
     }
   ]
 }

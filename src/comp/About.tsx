@@ -1,6 +1,13 @@
 import React from 'react';
 import Carousel from './Carousel';
 import './about.css';
+import {
+  BrowserRouter,
+  useParams,
+  Route,
+  Routes,
+  Link,
+} from 'react-router-dom';
 
 function About(props: { logged: boolean }) {
     return (
