@@ -76,7 +76,7 @@ function Subusiness (props: {logged:boolean,setlog:any}){
                    <div>
                         <h3>Blessed be thy <b>EMAIL</b></h3>
                         <input type="text" id='su-email' value={email} onChange={emailchange} />
-                        <h3>Fortune smiles upon your <b>businessNAME</b></h3>
+                        <h3>Fortune smiles upon your <b>BUSINESS NAME</b></h3>
                         <input type="text" id="su-businessname" value={businessname} onChange={unamechange} />
                         <h3>God have mercy on your <b>PASSWORD</b></h3>
                         <input type="password" id='su-password' value={password} onChange={passchange} />
