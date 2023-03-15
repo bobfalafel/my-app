@@ -1,1 +1,1 @@
-Heyyo, for your simplicity please run the db-json on port 3000 and the react app on port 3001. thank you and have a pleasent journy.
+Heyyo, for your simplicity please run the json-server on port 3000 and the react app on port 3001. thank you and have a pleasent journy.
